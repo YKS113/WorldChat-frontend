@@ -57,7 +57,7 @@ function TargetLanguageList() {
   return <List>
     <ListGroup >
         <GroupTitle onClick={() => handleToggleDisplay()}>
-        <span className='txt'>Autotanslate to</span> <span><ReactCountryFlag countryCode={targetLanguage.countryCode}/></span>
+        <span className='txt'>Autotanslate to</span> <span className='flagEmoji'><ReactCountryFlag countryCode={targetLanguage.countryCode}/></span>
           {display ? <BiChevronDown /> : <BiChevronUp />}
         </GroupTitle>
         {display ?
@@ -124,6 +124,9 @@ const GroupTitle = styled.h2`
     display: none;
   }
   }
+  .flagEmoji{
+  font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+  }
   
 `;
 
@@ -141,6 +144,7 @@ const LangBox=styled.section`
     padding: 1rem;
     border-radius: 2rem;
     z-index: 10;
+    font-family: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
     .flag{
         display: inline-block;
         font-size: 1em;

@@ -3,7 +3,7 @@ import { createGlobalStyle, css } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   body {
       ${(props) => {
-        switch (props.theme.mode) {
+        switch (props.theme) {
           case 'dark':
             return css`
               --bg-color-main: #1d1e23ff;
